@@ -1,7 +1,9 @@
+import { PomodoroTimer } from './components/pomodoro-timer';
+
 function App() {
   return (
     <>
-      <h1>Olá Mundo</h1>
+      <PomodoroTimer defaultPomodoroTimer={1500} />
     </>
   );
 }
