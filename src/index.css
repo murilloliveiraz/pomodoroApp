@@ -1,0 +1,113 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700;800&display=swap');
+
+@font-face {
+  font-family: 'Digital';
+  src: url('./assets/fonts/ds_digital/DS-DIGIT.TTF') format('truetype');
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  outline: none;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: 'Poppins', sans-serif;
+  background: #3a3d3e;
+  transition: background 300ms ease-in-out;
+  line-height: 1.5;
+}
+
+.container {
+  max-width: 640px;
+  margin: 0 auto;
+}
+
+.working {
+  background: #ef5d50;
+}
+
+.hidden {
+  display: none;
+}
+
+.pomodoro {
+  background: #f6f6f6;
+  margin: 50px 20px;
+  padding: 20px;
+  border-radius: 4px;
+  box-shadow: 0 0 10px rgba(0, 0, 0, .5);
+}
+
+.pomodoro h2 {
+  font-size: 24px;
+  text-align: center;
+}
+
+.pomodoro .timer {
+  font-family: 'Digital', 'Poppins', sans-serif;
+  font-size: 5rem;
+  text-align: center;
+}
+
+.pomodoro .controls {
+  display: flex;
+  align-items: center;
+  justify-content: space-evenly;
+}
+
+.pomodoro button {
+  background: #018749;
+  font-family: 'Poppins', sans-serif;
+  border: none;
+  cursor: pointer;
+  color: #f6f6f6;
+  padding: 12px 24px;
+  border-radius: 8px;
+  transition: background 300ms ease-in-out;
+  margin: 20px auto;
+}
+
+.working .pomodoro button {
+  background: #FF7F50;
+  color: #f6f6f6;
+}
+
+.pomodoro .details {
+  margin: 20px 0;
+}
+
+/* #CC0000 */
+
+.details {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  gap: 40px;
+  align-items: center;
+  justify-content: center;
+  transition: all 300ms ease;
+}
+
+.image {
+  max-width: 450px;
+  border-radius: 8px;
+}
+
+ul {
+  list-style: none;
+  font-weight: 500;
+}
+
+li {
+  font-family: 'Poppins', sans-serif;
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  margin-top: 8px;
+}
+
+.tomate {
+  height: 24px;
+}
