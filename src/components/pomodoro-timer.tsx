@@ -1,13 +1,13 @@
 import { useCallback, useEffect, useState } from 'react';
-import { useInterval } from '../hooks/use-interval';
-import { Button } from './button';
-import { Timer } from './timer';
-import workImage from '../assets/images/work.jpg';
 import restImage from '../assets/images/break.jpg';
 import tomate from '../assets/images/tomate.png';
-import bellStart from '../sounds/bell-start.mp3';
+import workImage from '../assets/images/work.jpg';
+import { useInterval } from '../hooks/use-interval';
 import bellFinish from '../sounds/bell-finish.mp3';
+import bellStart from '../sounds/bell-start.mp3';
 import { secondsToTime } from '../utils/seconds-to-time';
+import { Button } from './button';
+import { Timer } from './timer';
 
 const audioStartWorking = new Audio(bellStart);
 const audioStopWorking = new Audio(bellFinish);

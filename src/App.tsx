@@ -1,4 +1,5 @@
 import { PomodoroTimer } from './components/pomodoro-timer';
+import ToDoList from './components/to-do-list';
 
 function App() {
   return (
@@ -9,6 +10,7 @@ function App() {
         longRestTime={900}
         cycles={4}
       />
+      <ToDoList />
     </div>
   );
 }

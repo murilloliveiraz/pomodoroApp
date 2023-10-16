@@ -1,0 +1,36 @@
+.card {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  border-radius: 8px;
+  background-color: #414141;
+  padding: 1rem 2rem;
+}
+
+.card-buttons {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 0.5rem;
+}
+
+
+.add-todo{
+  margin-bottom: 2rem;
+  display: flex;
+  width: 100%;
+}
+
+.add-todo input {
+  width: 100%;
+}
+
+.todos {
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+}
+
+.done {
+  opacity: 0.5;
+}
