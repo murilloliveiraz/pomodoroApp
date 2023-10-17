@@ -5,7 +5,7 @@ type CardProps = {
   todo: Todo;
   completeTodo: (id: number) => void;
   deleteTodo: (id: number) => void;
-}
+};
 
 export default function Card({ todo, completeTodo, deleteTodo }: CardProps) {
   function handleCompleteTodo() {

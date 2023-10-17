@@ -1,4 +1,4 @@
-import { ChangeEvent, useState } from 'react';
+import { ChangeEvent, useEffect, useState } from 'react';
 import Card from './Card';
 
 export type Todo = {
@@ -9,7 +9,19 @@ export type Todo = {
 
 export function ToDoList(): JSX.Element {
   const [todoInput, setTodoInput] = useState('');
-  const [todos, setTodos] = useState<Todo[]>([]);
+  const [todos, setTodos] = useState<Todo[]>(() => {
+    const storedTodos = localStorage.getItem('@codersList:todos');
+
+    if (storedTodos) {
+      return JSON.parse(storedTodos);
+    }
+
+    return [];
+  });
+
+  useEffect(() => {
+    localStorage.setItem('@codersList:todos', JSON.stringify(todos));
+  }, [todos]);
 
   function addTodo() {
     setTodos((previousTodos) => [
@@ -20,16 +32,16 @@ export function ToDoList(): JSX.Element {
     setTodoInput('');
   }
 
-  function handleInputChange(e: ChangeEvent<HTMLInputElement>) {
-    setTodoInput(e.target.value);
-  }
-
   function completeTodo(id: number) {
     setTodos((previousTodos) =>
       previousTodos.map((todo) =>
         todo.id !== id ? todo : { ...todo, completed: !todo.completed },
       ),
     );
+  }
+
+  function handleInputChange(e: ChangeEvent<HTMLInputElement>) {
+    setTodoInput(e.target.value);
   }
 
   function deleteTodo(id: number) {
