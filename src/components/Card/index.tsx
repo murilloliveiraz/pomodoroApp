@@ -18,14 +18,23 @@ export default function Card({ todo, completeTodo, deleteTodo }: CardProps) {
 
   return (
     <div className={`card ${todo.completed ? 'done' : ''}`}>
-      <h2>{todo.title}</h2>
-
       <div className="card-buttons">
         <button onClick={handleCompleteTodo}>
-          {todo.completed ? 'retomar' : 'completar'}{' '}
+          {todo.completed ? (
+            <span className="material-symbols-outlined check">
+              check_circle
+            </span>
+          ) : (
+            <span className="material-symbols-outlined">
+              radio_button_unchecked
+            </span>
+          )}{' '}
         </button>
-        <button onClick={handleDeleteTodo}>deletar</button>
+        <button onClick={handleDeleteTodo}>
+          <span className="material-symbols-outlined">delete</span>
+        </button>
       </div>
+      <h3>{todo.title}</h3>
     </div>
   );
 }

@@ -52,11 +52,13 @@ export function ToDoList(): JSX.Element {
     <div className="App">
       <div className="add-todo">
         <input
-          placeholder="Fazer café"
+          placeholder="Adicione uma Tarefa"
           value={todoInput}
           onChange={handleInputChange}
         />
-        <button onClick={addTodo}>Adicionar</button>
+        <button onClick={addTodo} className="button">
+          <span className="material-symbols-outlined">add</span>
+        </button>
       </div>
 
       {todos.map((todo) => (

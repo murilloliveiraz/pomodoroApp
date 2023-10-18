@@ -57,7 +57,12 @@ body {
   justify-content: space-evenly;
 }
 
-.pomodoro button {
+
+.working .button {
+  background: #FF7F50;
+}
+
+.button {
   background: #018749;
   font-family: 'Poppins', sans-serif;
   border: none;
@@ -110,4 +115,80 @@ li {
 
 .tomate {
   height: 24px;
+}
+
+.App {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin-bottom: 50px;
+}
+
+.card {
+  display: flex;
+  align-items: center;
+  gap: 40px;
+  border-radius: 8px;
+  background-color: #f6f6f6;
+  padding: 1rem 2rem;
+  width: 90%;
+  margin-bottom: 20px;
+}
+
+.card-buttons {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 0.5rem;
+}
+
+
+.card-buttons button {
+  background: none;
+  border: none;
+  color: #121212;
+}
+
+.check {
+  color: #018749;
+}
+.working .check {
+  color: #FF7F50;
+}
+
+.add-todo{
+  margin-bottom: 2rem;
+  display: flex;
+  margin: auto;
+  justify-content: space-between;
+  align-items: center;
+  width: 90%;
+}
+
+.add-todo .button {
+  height: 40px;
+  display: flex;
+  align-items: center;
+  width: 40px;
+  justify-content: center;
+}
+
+.add-todo input {
+  width: 80%;
+  height: 40px;
+  border-radius: 8px;
+  padding: 12px;
+  border: 1px solid black;
+  font-family: 'Poppins', sans-serif;
+}
+
+
+.todos {
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+}
+
+.done {
+  opacity: 0.5;
 }

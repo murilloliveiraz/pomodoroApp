@@ -114,10 +114,18 @@ export function PomodoroTimer(props: Props): JSX.Element {
       <Timer mainTime={mainTime} />
 
       <div className="controls">
-        <Button text="Go Rest" onClick={() => configureRest(false)} />
-        <Button text="Work" onClick={() => configureWork()} />
         <Button
-          className={!working && !resting ? 'hidden' : ''}
+          className="button"
+          text="Go Rest"
+          onClick={() => configureRest(false)}
+        />
+        <Button
+          className="button"
+          text="Work"
+          onClick={() => configureWork()}
+        />
+        <Button
+          className={!working && !resting ? 'hidden' : 'button'}
           text={timeCounting ? 'Pause' : 'Play'}
           onClick={() => setTimeCounting(!timeCounting)}
         />
